@@ -10,6 +10,7 @@
 <meta name="author" content="Luna Bakery" />
 
 <link rel="stylesheet" href="lunabakery.css">
+<link rel="stylesheet" href ="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
 
 </head>
 
@@ -17,7 +18,9 @@
     <section class = "header">
         <nav>
             <a href = "lunabakery.html"><img src ="logo2.jpg"></a>
-            <div class = "nav-links">
+            <div class = "nav-links" id ="navLinks">
+                <i class="fa fa-times" onclick="showMenu()"></i>
+
                 <ul>
                     <li><a href="lunabakery.html">HOME</a></li>
                     <li><a href="product.html">PRODUCTS</a></li>
@@ -26,7 +29,7 @@
                     <li><a href="social_media.html">WE ARE ON SOCIAL MEDIA!</a></li>
                 </ul>
             </div>
-    
+            <i class="fa fa-bars" onclick="hideMenu()"></i>
         </nav>
         
         <div class = "text-box">
@@ -48,5 +51,17 @@
             </a>
         </section>
 
+        <script>
+            var navLinks = document.getElementById("navLinks");
+
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+        </script>
+        
+    
 </body>
 </html>  
